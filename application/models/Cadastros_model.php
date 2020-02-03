@@ -64,4 +64,31 @@ class Cadastros_model extends My_model
         $this->update('usuario', $dados, ['email' => $email]);
         return true;
     }
+
+    public function cadastrarEvento($dados)
+    {
+        return $this->insert('eventos', $dados);
+    }
+
+    public function atualizarEvento($dados, $id = null)
+    {
+        $this->update('eventos', $dados, ['id' => $id]);
+    }
+
+    public function listaEventos($offset = 0)
+    {
+        $sql = "SELECT * FROM eventos";
+        config_pagination($this, $sql, $offset);
+		return $this->db->query($sql . ' LIMIT ' . $this->ajax_pagination->per_page . ' OFFSET ' . $this->ajax_pagination->cur_page)->result();
+    }
+
+    public function excluirEvento($id)
+    {
+        return $this->db->query("DELETE FROM eventos WHERE id = ?", [$id]);
+    }
+
+    public function buscarEvento($id)
+    {
+        return $this->db->query("SELECT * FROM eventos WHERE id = ?", [$id])->row();
+    }
 }

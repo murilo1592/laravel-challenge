@@ -1,0 +1,11 @@
+{
+  "name": "laravel-challenge",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/murilo1592/laravel-challenge.git",
+  "author": "Murilo Mattos <murilo.mattos@fabricadecodigos.com>",
+  "license": "MIT",
+  "dependencies": {
+    "pg-calendar": "^1.4.31"
+  }
+}

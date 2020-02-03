@@ -30,7 +30,7 @@ class Ajax_pagination{
 
 	var $base_url			= ''; // The page we are linking to
 	var $total_rows  		= ''; // Total number of items (database results)
-	var $per_page	 		= 12; // Max number of items you want shown per page
+	var $per_page	 		= 5; // Max number of items you want shown per page
 	var $num_links			=  2; // Number of "digit" links to show before/after the currently viewed page
 	var $cur_page	 		=  0; // The current page being viewed
 	var $first_link   		= '&lsaquo; First';
@@ -274,7 +274,7 @@ class Ajax_pagination{
 
 		   return "<a class='page-link' href=\"javascript:void(0);\"
 					" . $this->anchor_class . "
-					   onclick=\"tabela(".$pageCount."); Voltartopo(); return false;\">"
+					   onclick=\"listaEventos(".$pageCount."); return false;\">"
 				   . $text .'</a>';
 	}
 

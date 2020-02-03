@@ -42,7 +42,7 @@ if ( ! function_exists('config_pagination'))
         $config['total_rows'] = $total_rows;
         $config['div']         = 'tbl';
         // $config['additional_param'] = 'dbop=table';
-        $config['per_page']   = 12;
+        $config['per_page']   = 5;
         $config['num_links']  = 5;
         $config['cur_page']   = empty($cur_page)?0:$cur_page;
         $config['show_count'] = false;
